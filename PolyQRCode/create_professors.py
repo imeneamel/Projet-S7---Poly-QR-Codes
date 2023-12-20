@@ -34,7 +34,7 @@ def create_professors():
         professor_user.user_permissions.add(permission)
 
         # Créez une instance du modèle Professeur associée à cet utilisateur
-        Professeur.objects.create(user=professor_user)
+        Professeur.create(user=professor_user)
 
         # Ajoutez d'autres attributions de rôles ou de permissions selon vos besoins
 
