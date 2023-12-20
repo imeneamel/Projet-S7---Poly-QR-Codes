@@ -13,6 +13,8 @@ class Professeur(models.Model):
 class Etudiant(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     cours_inscrits = models.ManyToManyField('Cours')
+    def __str__(self):
+        return self.user.username
 
 class Promotion(models.Model):
     annee_academique = models.CharField(max_length=4)
