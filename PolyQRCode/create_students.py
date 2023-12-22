@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group
-from PolyQR.models import Étudiant  
+from PolyQR.models import Etudiant  
 
 def create_students():
     
@@ -26,7 +26,7 @@ def create_students():
 
         student_user.groups.add(students_group)
 
-        Étudiant.create(user=student_user)
+        Etudiant.create(user=student_user)
 
 
 if __name__ == '__main__':
